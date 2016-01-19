@@ -1,0 +1,26 @@
+{
+  "name": "myapp2",
+  "version": "1.0.0",
+  "description": " inventory",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kongkmj/my_app2.git"
+  },
+  "author": "minjae-kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kongkmj/my_app2/issues"
+  },
+  "homepage": "https://github.com/kongkmj/my_app2#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.3.6"
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <header>
+      <% include ../partials/header %>
+    </header>
+    <div class="posts">
+    <% include partials/top %>
+  <!-- main start -->
+  <div class="index">
+  <table width="100%" border="1">
+    <tr>
+      <th>체크</th>
+      <th>번호</th>
+      <th>구분</th>
+      <th>제조사</th>
+      <th>품명</th>
+      <th>용량</th>
+      <th>Metric</th>
+      <th>Imperial</th>
+      <th>수량</th>
+      <th>오차</th>
+      <th>허용전압</th>
+      <th>허용전류</th>
+      <th>수정날짜</th>
+    </tr>
+      <% data.forEach(function(e){ a=0 %>
+       <tr>
+        <ul>
+          <td style="width:10px">
+            <form>
+              <input type="checkbox" name="number" value="1" style="width:40pt; height:20pt">
+            </form>
+          </td>
+
+          <td align="center"><%= a %></td>
+          <td align="center" style="width:10px"><%= e.sort %></td>
+          <td align="center"><%= e.Manufacture %></td>
+          <td style="width:25%"><a href="/posts/R/<%= e._id %>"><%= e.name %></a></td>
+          <td><%= e.value %></td>
+          <td align="center">metric</td>
+          <td align="center">imperial</td>
+          <td align="right"><%= e.number +"[Ea]"%>
+            <input type="button" value="+" style="width:25%; font-size:23px">
+            <input type="button" value="-" style="width:25%; font-size:23px"></td>
+          <td align="center">오차</td>
+          <td align="center">허용전압</td>
+          <td align="center">허용전류</td>
+          <td align="center"><span><%= e.createdAt.toLocaleString() %></span></td>
+          </tr>
+        </ul>
+      <%  }) %>
+      </tr>
+
+
+  </div>
+   <!-- main end -->
+    </div><!-- posts end -->
+    </table>
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+  </body>
+</html>

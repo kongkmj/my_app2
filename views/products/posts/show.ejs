@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <header>
+      <% include ../partials/header %>
+    </header>
+    <div class="posts">
+    <% include partials/top %>
+  <!-- main start -->
+  <div class="show">
+  <table width="100%" border="1">
+    <tr>
+      <th>구분</th>
+      <th>품명</th>
+      <th>제조사</th>
+      <th>수치</th>
+      <th>개수</th>
+      <th>수정날짜</th>
+      <th>수정</th>
+    </tr>
+       <tr>
+        <ul>
+          <td><%= data.sort %></a></td>
+          <td><%= data.name %></a></td>
+          <td><%= data.Manufacture %></a></td>
+          <td><%= data.value %></a></td>
+          <td><%= data.number %></a></td>
+          <td><span><%= data.createdAt.toLocaleString() %></span></td>
+          <td><a href="/posts/insert"><button>+</button></a>
+          <a href="/posts/insert"><button>-</button></a></td>
+        </ul>
+      </tr>
+
+  </div>
+   <!-- main end -->
+    </div><!-- posts end -->
+    </table>
+  </body>
+</html>
